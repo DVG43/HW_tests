@@ -18,8 +18,8 @@ class TestFunctionsPytest:
     def test_returning_name(self):
         assert returning_name("11-2", documents) == "Геннадий Покемонов"
 
-    # def test_returning_directories(self):
-    #     assert returning_directories () ==
-    #
-    # def test_returning_lis(self):
-    #     assert returning_lis () ==
+    def test_returning_directories(self):
+        assert returning_directories ("11-2", documents) == '10006'
+
+    def test_returning_lis(self):
+         assert returning_lis (documents) == ['passport', '2207 876234', 'Василий Гупкин']

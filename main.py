@@ -54,8 +54,8 @@ def returning_directories(betta, shelfs):
 
 def returning_lis(dates):
     for personal_dates in dates:
-        print(personal_dates['type'], personal_dates['number'], personal_dates['name'])
-
+        resultat = [personal_dates['type'], personal_dates['number'], personal_dates['name']]
+        return resultat
 
 def input_dates(t, n, np):
     new_dates = {"tape": t, "namber": n, "name": np}
@@ -92,7 +92,7 @@ if __name__ == '__main__':
         print('номер полки', returning_directories(local_user_input, directories))
 
     elif user_input == 'l' and 'list':
-        returning_lis(documents)
+        print(returning_lis(documents))
 
     elif user_input == 'a' and 'add':
         local_user_input_n = input('Введите номер документа  ')
