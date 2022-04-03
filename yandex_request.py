@@ -35,12 +35,16 @@ class YaUploader:
         response = requests.put(href, data=open(filename, 'rb'))
         response.raise_for_status()
         if response.status_code == 201:
-            print("Success")
+            status_resalt = "Success"
+            print(status_resalt)
+        return status_resalt
 
 def pushing_files_to_yandex (name_file):
     putloader = YaUploader(token)
-    putloader.upload_file_to_disk(f'Netologi/{name_file}', f'{name_file}')
-    print(f' Файл {name_file} отправлен на яндекс диск в директорию Netologi')
+    if putloader.upload_file_to_disk(f'Netologi/{name_file}', f'{name_file}') == "Success":
+        print(f' Файл {name_file} отправлен на яндекс диск в директорию Netologi')
+        cod_resalt = 201
+        return cod_resalt
 
 if __name__ == '__main__':
     # Получить путь к загружаемому файлу и токен от пользователя
@@ -48,4 +52,5 @@ if __name__ == '__main__':
     token = 'AQAAAABbqfAeAADLW0ZHggdGL0GIpWWHzWBa9gI'
     # uploader = YaUploader(token)
     # pprint(uploader.get_files_list(path_to_file))
-    pushing_files_to_yandex('File_for_test.txt')
+    print ('Результаты работы')
+    print(pushing_files_to_yandex('File_for_test.txt'))
