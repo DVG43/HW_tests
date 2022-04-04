@@ -1,6 +1,6 @@
 import pytest
 from main import returning_name, returning_directories, returning_lis
-from yandex_request import pushing_files_to_yandex
+
 
 # При наличии своего решения данной задачи можно использовать его или использовать предложенный код в директории scr текущего задания.
 #
@@ -41,3 +41,5 @@ class TestFunctionsPytest:
 
     def test_returning_lis(self):
          assert returning_lis (documents) == ['passport', '2207 876234', 'Василий Гупкин']
+
+

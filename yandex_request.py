@@ -49,7 +49,7 @@ def pushing_files_to_yandex (name_file):
 if __name__ == '__main__':
     # Получить путь к загружаемому файлу и токен от пользователя
     path_to_file = 'https://cloud-api.yandex.net/v1/disk/resources/files'
-    token = 'AQAAAABbqfAeAADLW0ZHggdGL0GIpWWHzWBa9gI'
+    token = '*************************'
     # uploader = YaUploader(token)
     # pprint(uploader.get_files_list(path_to_file))
     print ('Результаты работы')
